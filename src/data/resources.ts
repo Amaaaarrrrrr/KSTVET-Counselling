@@ -3,16 +3,16 @@ import type { Resource } from '../types';
 export const resources: Resource[] = [
   {
     id: '1',
-    title: 'Understanding Anxiety: A Guide for Young Adults',
+    title: 'Understanding Anxiety: A Guide for KSTVET Trainees',
     category: 'mental_health',
     description: 'A plain-English guide to recognising anxiety symptoms and practical coping strategies you can start today.',
     type: 'pdf'
   },
   {
     id: '2',
-    title: '5-Minute Mindfulness Exercises for Busy Students',
+    title: '5-Minute Mindfulness Exercises for Busy Trainers',
     category: 'mental_health',
-    description: 'Quick grounding techniques designed for students — use them between classes, before an exam, or when overwhelmed.',
+    description: 'Quick grounding techniques designed for students and staff — use them between classes or when overwhelmed.',
     type: 'article',
     readTime: '7 min read'
   },
@@ -47,23 +47,23 @@ export const resources: Resource[] = [
   },
   {
     id: '7',
-    title: 'Your Complete HELB Loan Guide 2026',
+    title: 'Your Complete HEF (Higher Education Fund) Guide 2026',
     category: 'financial',
-    description: 'Everything you need to know about applying, managing, repayment grace periods, and avoiding default.',
+    description: 'Everything you need to know about applying via portal.hef.co.ke, managing, and repayment grace periods.',
     type: 'pdf'
   },
   {
     id: '8',
     title: 'Emergency Bursary Application Checklist',
     category: 'financial',
-    description: 'Step-by-step checklist for applying to internal and external bursaries available to TVET students in Kenya.',
+    description: 'Step-by-step checklist for applying to KSTVET bursaries at kstvet.ac.ke/bursary/ and external funds.',
     type: 'pdf'
   },
   {
     id: '9',
-    title: 'Making the Most of Your TVET Programme: A Student Success Guide',
+    title: 'Making the Most of Your DTTE Programme: A Trainee Success Guide',
     category: 'academic',
-    description: 'Strategies for staying motivated, managing your time, and getting the most from your technical training.',
+    description: 'Strategies for staying motivated, managing your time, and getting the most from your technical trainer training.',
     type: 'article',
     readTime: '8 min read'
   },
@@ -74,5 +74,21 @@ export const resources: Resource[] = [
     description: 'Signs you\'re heading towards burnout, why it happens in technical programmes, and what to do about it.',
     type: 'article',
     readTime: '6 min read'
+  },
+  {
+    id: '11',
+    title: 'Teaching Practice Preparation Guide for KSTVET Trainees',
+    category: 'career',
+    description: 'Practical advice for preparing for your teaching practice placement — what schools expect, how to manage the transition, and how to thrive.',
+    type: 'article',
+    readTime: '6 min read'
+  },
+  {
+    id: '12',
+    title: 'Understanding KSTVET\'s Psycho-Social Support CPD: What It Means for Staff Wellbeing',
+    category: 'mental_health',
+    description: 'An overview of how the Psycho-Social Support CPD programme at KSTVET benefits the wider staff community and how to access it.',
+    type: 'article',
+    readTime: '4 min read'
   }
 ];

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { cn } from '../../utils/cn';
 
 interface ButtonProps {
-  variant: 'primary' | 'outline' | 'coral' | 'ghost';
+  variant: 'primary' | 'outline' | 'cta' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   onClick?: () => void;
@@ -24,10 +24,10 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center gap-2 font-medium rounded-full transition-all duration-200 cursor-pointer";
   
   const variants = {
-    primary: "bg-teal-400 hover:bg-teal-600 text-white shadow-md hover:scale-105 active:scale-95",
-    outline: "border-2 border-teal-400 text-teal-600 hover:bg-teal-50",
-    coral: "bg-coral-400 hover:bg-coral-600 text-white shadow-md hover:scale-105 active:scale-95",
-    ghost: "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
+    primary: "bg-maroon-400 hover:bg-maroon-600 text-white shadow-md hover:scale-105 active:scale-95",
+    outline: "border-2 border-maroon-400 text-maroon-400 hover:bg-maroon-50",
+    cta: "bg-cta-400 hover:bg-cta-600 text-white shadow-md hover:scale-105 active:scale-95",
+    ghost: "text-slate-500 hover:text-maroon-400 hover:bg-maroon-50"
   };
 
   const sizes = {

@@ -19,13 +19,13 @@ const WhoWeHelpPage: React.FC = () => {
   return (
     <div className="pt-32 md:pt-40">
       {/* Hero */}
-      <section className="section-pad bg-sand-50">
+      <section className="section-pad bg-ivory-50">
         <div className="max-w-7xl mx-auto text-center">
           <ScrollReveal>
-            <Badge variant="teal" className="mb-6">Who We Help</Badge>
+            <Badge variant="green" className="mb-6">Who We Help</Badge>
             <h1 className="section-heading mb-8">A Place for Everyone</h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              Our centre is an inclusive space. We have developed specialised approaches to support the unique challenges faced by different members of our community.
+              Our centre is an inclusive space. We have developed specialised approaches to support the unique challenges faced by different members of the KSTVET community.
             </p>
           </ScrollReveal>
         </div>
@@ -38,18 +38,16 @@ const WhoWeHelpPage: React.FC = () => {
           const isEven = index % 2 === 0;
 
           return (
-            <section key={item.id} className={cn("section-pad", isEven ? "bg-white" : "bg-sand-50/30")}>
+            <section key={item.id} className={cn("section-pad", isEven ? "bg-white" : "bg-ivory-50/30")}>
               <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div className={cn("space-y-8", !isEven && "lg:order-2")}>
                   <ScrollReveal>
                     <div className={cn(
                       "w-16 h-16 rounded-2xl flex items-center justify-center mb-6",
-                      item.color === 'teal' && "bg-teal-50 text-teal-600",
-                      item.color === 'purple' && "bg-purple-50 text-purple-600",
-                      item.color === 'amber' && "bg-amber-50 text-amber-600",
+                      item.color === 'green' && "bg-green-50 text-green-800",
+                      item.color === 'gold' && "bg-gold-50 text-gold-600",
                       item.color === 'coral' && "bg-coral-50 text-coral-600",
-                      item.color === 'sand' && "bg-sand-50 text-slate-600",
-                      item.color === 'teal-light' && "bg-teal-50 text-teal-400"
+                      item.color === 'ivory' && "bg-ivory-50 text-slate-600"
                     )}>
                       <Icon className="w-8 h-8" />
                     </div>
@@ -61,13 +59,13 @@ const WhoWeHelpPage: React.FC = () => {
                       <h4 className="font-bold text-slate-900">How we support you:</h4>
                       <ul className="space-y-3">
                         {[
-                          'Tailored one-on-one counselling sessions',
+                          'Tailored one-on-one guidance sessions',
                           'Group workshops focused on shared challenges',
                           'Confidential referral to specialist services',
                           'Flexible scheduling to fit your commitments'
                         ].map((point, i) => (
                           <li key={i} className="flex items-center gap-3 text-slate-600">
-                            <CheckCircle2 className="w-5 h-5 text-teal-400 shrink-0" />
+                            <CheckCircle2 className="w-5 h-5 text-green-600 shrink-0" />
                             <span>{point}</span>
                           </li>
                         ))}
@@ -84,13 +82,11 @@ const WhoWeHelpPage: React.FC = () => {
                 <div className={cn("relative", !isEven && "lg:order-1")}>
                   <ScrollReveal delay={0.2}>
                     <div className={cn(
-                      "aspect-square rounded-[60px] overflow-hidden relative shadow-2xl",
-                      item.color === 'teal' && "bg-teal-50",
-                      item.color === 'purple' && "bg-purple-50",
-                      item.color === 'amber' && "bg-amber-50",
+                      "aspect-square rounded-[60px] overflow-hidden relative shadow-2xl border-8 border-white",
+                      item.color === 'green' && "bg-green-50",
+                      item.color === 'gold' && "bg-gold-50",
                       item.color === 'coral' && "bg-coral-50",
-                      item.color === 'sand' && "bg-sand-100",
-                      item.color === 'teal-light' && "bg-teal-50"
+                      item.color === 'ivory' && "bg-ivory-100"
                     )}>
                       {item.imageUrl ? (
                         <>
@@ -100,7 +96,7 @@ const WhoWeHelpPage: React.FC = () => {
                             className="w-full h-full object-cover"
                             referrerPolicy="no-referrer"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent" />
                           <div className="absolute bottom-8 left-8 right-8">
                             <p className="font-serif text-xl text-white italic leading-relaxed">
                               "We understand the specific pressures you face in your role within our community."

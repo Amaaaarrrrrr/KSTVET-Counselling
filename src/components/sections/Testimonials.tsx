@@ -5,13 +5,13 @@ import { testimonials } from '../../data/testimonials';
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="section-pad bg-sand-100 overflow-hidden">
+    <section className="section-pad bg-cream-100 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <ScrollReveal>
             <h2 className="section-heading">Voices of Our Community</h2>
             <p className="section-sub mx-auto">
-              Real stories from students and staff who have found support and healing at the centre.
+              Real stories from trainees and staff who have found support and guidance at the KSTVET centre.
             </p>
           </ScrollReveal>
         </div>

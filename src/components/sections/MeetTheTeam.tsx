@@ -9,13 +9,13 @@ import { cn } from '../../utils/cn';
 
 export const MeetTheTeam: React.FC = () => {
   return (
-    <section className="section-pad bg-sand-50">
+    <section className="section-pad bg-cream-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <ScrollReveal>
             <h2 className="section-heading">Meet Our Counsellors</h2>
             <p className="section-sub mx-auto">
-              Our team of qualified professionals is dedicated to providing the highest standard of care.
+              Our team of qualified professionals is dedicated to providing the highest standard of care for the KSTVET community.
             </p>
           </ScrollReveal>
         </div>
@@ -23,14 +23,14 @@ export const MeetTheTeam: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
             <ScrollReveal key={member.id} delay={index * 0.1}>
-              <div className="card-base p-8 h-full flex flex-col group">
+              <div className="card-base p-8 h-full flex flex-col group border-b-4 border-transparent hover:border-maroon-400 transition-all duration-300">
                 <div className="relative w-24 h-24 mb-6 group-hover:scale-110 transition-transform duration-500">
                   <div className={cn(
                     "absolute inset-0 rounded-full flex items-center justify-center font-serif text-3xl font-bold",
-                    member.color === 'teal' && "bg-teal-100 text-teal-600",
-                    member.color === 'purple' && "bg-purple-100 text-purple-600",
-                    member.color === 'amber' && "bg-amber-100 text-amber-600",
-                    member.color === 'coral' && "bg-coral-100 text-coral-600"
+                    member.color === 'maroon' && "bg-maroon-50 text-maroon-400",
+                    member.color === 'gold' && "bg-gold-50 text-gold-400",
+                    member.color === 'cta' && "bg-cta-50 text-cta-400",
+                    member.color === 'forest' && "bg-forest-400/10 text-forest-400"
                   )}>
                     {member.initials}
                   </div>
@@ -44,7 +44,7 @@ export const MeetTheTeam: React.FC = () => {
                   )}
                 </div>
                 <h3 className="font-serif text-xl text-slate-900 mb-1">{member.name}</h3>
-                <p className="text-sm text-teal-600 font-medium mb-4">{member.title}</p>
+                <p className="text-sm text-maroon-400 font-medium mb-4">{member.title}</p>
                 
                 <div className="space-y-4 flex-grow">
                   <div className="flex flex-wrap gap-1.5">
@@ -58,7 +58,7 @@ export const MeetTheTeam: React.FC = () => {
                 </div>
 
                 <div className="pt-6 mt-auto">
-                  <Button variant="ghost" size="sm" className="w-full justify-between group-hover:bg-teal-50">
+                  <Button variant="ghost" size="sm" className="w-full justify-between group-hover:bg-maroon-50">
                     View Full Profile
                     <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                   </Button>

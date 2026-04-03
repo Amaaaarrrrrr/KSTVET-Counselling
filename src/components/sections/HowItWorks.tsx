@@ -7,7 +7,7 @@ export const HowItWorks: React.FC = () => {
     {
       number: '01',
       title: 'Book a Session',
-      description: 'Fill out our simple contact form or walk into Room C14. We’ll match you with the right counsellor.',
+      description: 'Fill out our simple contact form or walk into the Guidance & Counselling Office. We’ll match you with the right counsellor.',
       icon: <Calendar className="w-8 h-8" />
     },
     {
@@ -31,23 +31,23 @@ export const HowItWorks: React.FC = () => {
           <ScrollReveal>
             <h2 className="section-heading">How It Works</h2>
             <p className="section-sub mx-auto">
-              Taking the first step is often the hardest. We’ve made the process as simple and welcoming as possible.
+              Taking the first step is often the hardest. We’ve made the process as simple and welcoming as possible for all KSTVET members.
             </p>
           </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {/* Connector Line (Desktop) */}
-          <div className="hidden md:block absolute top-10 left-1/4 right-1/4 h-0.5 border-t-2 border-dashed border-teal-100 -z-10" />
+          <div className="hidden md:block absolute top-10 left-1/4 right-1/4 h-0.5 border-t-2 border-dashed border-maroon-50 -z-10" />
           
           {steps.map((step, index) => (
             <ScrollReveal key={index} delay={index * 0.2}>
               <div className="text-center space-y-6">
                 <div className="relative inline-block">
-                  <div className="w-20 h-20 rounded-full bg-teal-400 text-white flex items-center justify-center font-serif text-2xl shadow-lg mx-auto relative z-10">
+                  <div className="w-20 h-20 rounded-full bg-maroon-400 text-white flex items-center justify-center font-serif text-2xl shadow-lg mx-auto relative z-10">
                     {step.number}
                   </div>
-                  <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-sand-100 flex items-center justify-center text-teal-600">
+                  <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gold-50 flex items-center justify-center text-maroon-400">
                     {step.icon}
                   </div>
                 </div>
@@ -61,14 +61,14 @@ export const HowItWorks: React.FC = () => {
         </div>
 
         <ScrollReveal delay={0.6} className="mt-24">
-          <div className="max-w-4xl mx-auto bg-teal-50 rounded-3xl p-8 md:p-12 border-l-8 border-teal-400 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-teal-600 shrink-0 shadow-sm">
+          <div className="max-w-4xl mx-auto bg-maroon-50 rounded-3xl p-8 md:p-12 border-l-8 border-maroon-400 flex flex-col md:flex-row items-center gap-8">
+            <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center text-maroon-400 shrink-0 shadow-sm">
               <Lock className="w-8 h-8" />
             </div>
             <div>
               <h4 className="font-serif text-2xl text-slate-900 mb-2">Your privacy is our priority.</h4>
               <p className="text-slate-600 leading-relaxed">
-                Everything discussed in your sessions is strictly confidential. We adhere to the highest ethical standards of the Kenya Counselling and Psychological Association (KCPA). Your information will never be shared with teachers, parents, or employers without your explicit consent.
+                Everything discussed in your sessions is strictly confidential. We adhere to the highest ethical standards of the Kenya Counselling and Psychological Association (KCPA). Your information will never be shared with lecturers, parents, or employers without your explicit consent.
               </p>
             </div>
           </div>

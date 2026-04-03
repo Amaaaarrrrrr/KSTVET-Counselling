@@ -22,7 +22,7 @@ export const WhoWeHelp: React.FC = () => {
           <ScrollReveal>
             <h2 className="section-heading">Who We Help</h2>
             <p className="section-sub mx-auto">
-              Our services are designed to meet the unique needs of every member of our community.
+              Our services are designed to meet the unique needs of every member of the KSTVET community.
             </p>
           </ScrollReveal>
         </div>
@@ -32,7 +32,7 @@ export const WhoWeHelp: React.FC = () => {
             const Icon = iconMap[item.icon] || Users;
             return (
               <ScrollReveal key={item.id} delay={index * 0.1}>
-                <div className="card-base p-0 h-full flex flex-col group overflow-hidden">
+                <div className="card-base p-0 h-full flex flex-col group overflow-hidden border-b-4 border-transparent hover:border-maroon-400 transition-all duration-300">
                   {item.imageUrl && (
                     <div className="aspect-[16/9] overflow-hidden">
                       <img 
@@ -46,12 +46,12 @@ export const WhoWeHelp: React.FC = () => {
                   <div className="p-8 flex flex-col h-full">
                     <div className={cn(
                       "w-14 h-14 rounded-2xl flex items-center justify-center mb-6",
-                      item.color === 'teal' && "bg-teal-50 text-teal-600",
-                      item.color === 'purple' && "bg-purple-50 text-purple-600",
-                      item.color === 'amber' && "bg-amber-50 text-amber-600",
-                      item.color === 'coral' && "bg-coral-50 text-coral-600",
-                      item.color === 'sand' && "bg-sand-50 text-slate-600",
-                      item.color === 'teal-light' && "bg-teal-50 text-teal-400"
+                      item.color === 'maroon' && "bg-maroon-50 text-maroon-400",
+                      item.color === 'gold' && "bg-gold-50 text-gold-400",
+                      item.color === 'cta' && "bg-cta-50 text-cta-400",
+                      item.color === 'cream' && "bg-cream-100 text-slate-900",
+                      item.color === 'forest' && "bg-forest-400/10 text-forest-400",
+                      item.color === 'olive' && "bg-olive-400/10 text-olive-400"
                     )}>
                       <Icon className="w-7 h-7" />
                     </div>
@@ -61,7 +61,7 @@ export const WhoWeHelp: React.FC = () => {
                     </p>
                     <Link
                       to="/who-we-help"
-                      className="text-teal-600 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                      className="text-maroon-400 font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Learn more <span>→</span>
                     </Link>

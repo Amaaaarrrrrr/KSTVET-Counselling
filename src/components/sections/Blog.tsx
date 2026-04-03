@@ -13,11 +13,11 @@ export const Blog: React.FC = () => {
           <ScrollReveal className="max-w-2xl">
             <h2 className="section-heading">Wellness Blog</h2>
             <p className="section-sub">
-              Insights, advice, and stories from our counsellors to help you navigate life's challenges.
+              Insights, advice, and stories from our counsellors to help you navigate life's challenges at KSTVET.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <Link to="/blog" className="text-teal-600 font-bold flex items-center gap-2 hover:gap-3 transition-all group">
+            <Link to="/blog" className="text-maroon-400 font-bold flex items-center gap-2 hover:gap-3 transition-all group">
               View all posts
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -25,9 +25,9 @@ export const Blog: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blog.map((post, index) => (
+          {blog.slice(0, 3).map((post, index) => (
             <ScrollReveal key={post.id} delay={index * 0.1}>
-              <Link to={`/blog/${post.slug}`} className="card-base p-0 flex flex-col h-full group overflow-hidden">
+              <Link to={`/blog/${post.slug}`} className="card-base p-0 flex flex-col h-full group overflow-hidden border-b-4 border-transparent hover:border-maroon-400 transition-all duration-300">
                 {post.imageUrl && (
                   <div className="aspect-video overflow-hidden">
                     <img 
@@ -40,12 +40,12 @@ export const Blog: React.FC = () => {
                 )}
                 <div className="p-8 flex flex-col h-full">
                   <Badge variant={
-                    post.category === 'Mental Health' ? 'teal' :
-                    post.category === 'Career' ? 'purple' : 'amber'
+                    post.category === 'Mental Health' ? 'maroon' :
+                    post.category === 'Career' ? 'gold' : 'gold'
                   } size="sm" className="mb-4 w-fit">
                     {post.category}
                   </Badge>
-                  <h3 className="font-serif text-2xl text-slate-900 mb-4 group-hover:text-teal-600 transition-colors leading-tight">
+                  <h3 className="font-serif text-2xl text-slate-900 mb-4 group-hover:text-maroon-400 transition-colors leading-tight">
                     {post.title}
                   </h3>
                   <p className="text-slate-500 text-sm mb-8 line-clamp-3 leading-relaxed">
@@ -54,7 +54,7 @@ export const Blog: React.FC = () => {
                   
                   <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-500">
+                      <div className="w-8 h-8 rounded-full bg-maroon-50 flex items-center justify-center text-xs font-bold text-maroon-400">
                         {post.authorInitials}
                       </div>
                       <span className="text-xs font-medium text-slate-600">{post.author}</span>

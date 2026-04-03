@@ -17,10 +17,10 @@ const BlogPage: React.FC = () => {
   return (
     <div className="pt-32 md:pt-40">
       {/* Hero */}
-      <section className="section-pad bg-sand-50">
+      <section className="section-pad bg-ivory-50">
         <div className="max-w-7xl mx-auto text-center">
           <ScrollReveal>
-            <Badge variant="teal" className="mb-6">Wellness Blog</Badge>
+            <Badge variant="green" className="mb-6">Wellness Blog</Badge>
             <h1 className="section-heading mb-8">Insights & Advice</h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Practical wisdom and professional perspectives on navigating the unique challenges of TVET life and beyond.
@@ -39,7 +39,7 @@ const BlogPage: React.FC = () => {
               className={cn(
                 "px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer",
                 activeCategory === cat 
-                  ? "bg-teal-400 text-white shadow-md" 
+                  ? "bg-green-800 text-white shadow-md" 
                   : "bg-slate-50 text-slate-500 hover:bg-slate-100"
               )}
             >
@@ -55,7 +55,7 @@ const BlogPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
               <ScrollReveal key={post.id} delay={index * 0.1}>
-                <Link to={`/blog/${post.slug}`} className="card-base p-0 flex flex-col h-full group overflow-hidden">
+                <Link to={`/blog/${post.slug}`} className="card-base p-0 flex flex-col h-full group overflow-hidden border-b-4 border-transparent hover:border-green-800 transition-all duration-300">
                   {post.imageUrl && (
                     <div className="aspect-video overflow-hidden">
                       <img 
@@ -68,12 +68,12 @@ const BlogPage: React.FC = () => {
                   )}
                   <div className="p-8 flex flex-col h-full">
                     <Badge variant={
-                      post.category === 'Mental Health' ? 'teal' :
-                      post.category === 'Career' ? 'purple' : 'amber'
+                      post.category === 'Mental Health' ? 'green' :
+                      post.category === 'Career' ? 'gold' : 'gold'
                     } size="sm" className="mb-4 w-fit">
                       {post.category}
                     </Badge>
-                    <h3 className="font-serif text-2xl text-slate-900 mb-4 group-hover:text-teal-600 transition-colors leading-tight">
+                    <h3 className="font-serif text-2xl text-slate-900 mb-4 group-hover:text-green-800 transition-colors leading-tight">
                       {post.title}
                     </h3>
                     <p className="text-slate-500 text-sm mb-8 line-clamp-3 leading-relaxed">
@@ -82,7 +82,7 @@ const BlogPage: React.FC = () => {
                     
                     <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-xs font-bold text-slate-500">
+                        <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-xs font-bold text-green-800">
                           {post.authorInitials}
                         </div>
                         <span className="text-xs font-medium text-slate-600">{post.author}</span>

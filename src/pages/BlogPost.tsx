@@ -20,7 +20,7 @@ const BlogPost: React.FC = () => {
       <article className="max-w-4xl mx-auto px-6">
         {/* Back Link */}
         <ScrollReveal>
-          <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-teal-600 mb-12 hover:gap-3 transition-all group">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-green-800 mb-12 hover:gap-3 transition-all group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Blog
           </Link>
@@ -30,8 +30,8 @@ const BlogPost: React.FC = () => {
         <header className="space-y-8 mb-16">
           <ScrollReveal delay={0.1}>
             <Badge variant={
-              post.category === 'Mental Health' ? 'teal' :
-              post.category === 'Career' ? 'purple' : 'amber'
+              post.category === 'Mental Health' ? 'green' :
+              post.category === 'Career' ? 'gold' : 'gold'
             } size="md">
               {post.category}
             </Badge>
@@ -42,7 +42,7 @@ const BlogPost: React.FC = () => {
 
           {post.imageUrl && (
             <ScrollReveal delay={0.15}>
-              <div className="aspect-[21/9] rounded-[40px] overflow-hidden shadow-2xl">
+              <div className="aspect-[21/9] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
                 <img 
                   src={post.imageUrl} 
                   alt={post.title}
@@ -55,7 +55,7 @@ const BlogPost: React.FC = () => {
 
           <ScrollReveal delay={0.2} className="flex flex-wrap items-center justify-between gap-6 pt-8 border-t border-slate-100">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-lg font-serif font-bold text-teal-600">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center text-lg font-serif font-bold text-green-800">
                 {post.authorInitials}
               </div>
               <div>
@@ -67,10 +67,10 @@ const BlogPost: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-teal-50 hover:text-teal-600 transition-all cursor-pointer">
+              <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-green-50 hover:text-green-800 transition-all cursor-pointer">
                 <Share2 className="w-4 h-4" />
               </button>
-              <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-teal-50 hover:text-teal-600 transition-all cursor-pointer">
+              <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-green-50 hover:text-green-800 transition-all cursor-pointer">
                 <Bookmark className="w-4 h-4" />
               </button>
             </div>
@@ -83,7 +83,7 @@ const BlogPost: React.FC = () => {
         </ScrollReveal>
 
         {/* Footer CTA */}
-        <ScrollReveal delay={0.4} className="mt-20 p-8 md:p-12 bg-sand-50 rounded-[40px] border border-sand-200 text-center space-y-6">
+        <ScrollReveal delay={0.4} className="mt-20 p-8 md:p-12 bg-ivory-50 rounded-[40px] border border-ivory-200 text-center space-y-6">
           <h3 className="font-serif text-3xl text-slate-900">Need someone to talk to?</h3>
           <p className="text-slate-600 max-w-xl mx-auto leading-relaxed">
             If this article resonated with you and you'd like to explore these topics further in a safe, confidential space, our counsellors are here for you.
@@ -99,9 +99,9 @@ const BlogPost: React.FC = () => {
           <h3 className="font-serif text-3xl text-slate-900 mb-12">Related Reading</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blog.filter(p => p.id !== post.id).slice(0, 2).map((related, i) => (
-              <Link key={related.id} to={`/blog/${related.slug}`} className="card-base p-8 group">
-                <Badge variant="teal" size="sm" className="mb-4">{related.category}</Badge>
-                <h4 className="font-serif text-xl text-slate-900 mb-4 group-hover:text-teal-600 transition-colors">{related.title}</h4>
+              <Link key={related.id} to={`/blog/${related.slug}`} className="card-base p-8 group border-b-4 border-transparent hover:border-green-800 transition-all">
+                <Badge variant="green" size="sm" className="mb-4">{related.category}</Badge>
+                <h4 className="font-serif text-xl text-slate-900 mb-4 group-hover:text-green-800 transition-colors">{related.title}</h4>
                 <p className="text-sm text-slate-500 line-clamp-2">{related.excerpt}</p>
               </Link>
             ))}

@@ -8,37 +8,37 @@ export const faqs: FAQ[] = [
   },
   {
     id: '2',
-    question: 'Do I need to be a student to access counselling?',
-    answer: 'While our primary focus is on current KSTVET students, we also provide support to teaching staff, support staff, alumni, parents/guardians, and members of the surrounding community through our outreach programmes.'
+    question: 'Who can access KSTVET Guidance & Counselling services?',
+    answer: 'Our services are open to all KSTVET Trainees (DTTE, Instructor Training, Certificate), Academic Staff, Non-Academic Staff, and Alumni. We also extend support to parents/guardians and participants in our CPD programmes like "Mental Wellness Promotion".'
   },
   {
     id: '3',
     question: 'How much does it cost?',
-    answer: 'Counselling is completely free for all current KSTVET students and staff. For alumni and community members, the first three sessions are free, with a subsidised rate of KSh 500 per session thereafter to help cover administrative costs.'
+    answer: 'Guidance and counselling services are provided free of charge to all current KSTVET trainees and staff as part of our commitment to institutional wellbeing. For alumni and community members, we offer subsidised sessions to ensure mental health support remains accessible.'
   },
   {
     id: '4',
+    question: 'Can you help me with my HEF (Higher Education Fund) application?',
+    answer: 'Yes. While we are not the finance office, our Career & Academic Guidance service provides psycho-social support for trainees facing financial stress. We can guide you through the portal.hef.co.ke application process and help you manage the anxiety associated with financial hardship.'
+  },
+  {
+    id: '5',
     question: 'What happens in the first session?',
     answer: 'The first session is a warm, informal conversation. Your counsellor will introduce themselves, explain how counselling works, and listen to what’s on your mind. You don’t need to have a "big" problem to come in — we’re here to listen to whatever you want to share.'
   },
   {
-    id: '5',
-    question: 'Can I choose my counsellor?',
-    answer: 'We try our best to match you with a counsellor who fits your needs. If you have a preference for a specific counsellor or gender, please let us know when booking. If after a session you feel the fit isn’t right, you are welcome to request a different counsellor.'
+    id: '6',
+    question: 'Can I get support for my Teaching Practice (TP) placement?',
+    answer: 'Absolutely. We offer specific "TP Readiness" sessions to help trainees manage the transition to schools across Kenya, handle classroom dynamics, and cope with the personal adjustment of being away from the Gigiri campus.'
   },
   {
-    id: '6',
+    id: '7',
     question: 'What if I need help with something not listed?',
     answer: 'If your needs fall outside our areas of expertise, we won’t leave you stranded. We have an extensive referral network of specialists, medical professionals, and community organisations across Nairobi to ensure you get the right support.'
   },
   {
-    id: '7',
-    question: 'Can a teacher, parent, or friend refer me?',
-    answer: 'Yes, we accept referrals from anyone. However, counselling is most effective when it is voluntary. We will always reach out to you directly to confirm if you would like to proceed with a session.'
-  },
-  {
     id: '8',
     question: 'How do I access counselling online or by phone?',
-    answer: 'We offer flexible session formats. While we prefer in-person meetings at our campus centre, we also provide secure video calls and phone sessions for those who cannot make it to campus or prefer the comfort of their own space.'
+    answer: 'We offer flexible session formats. While we prefer in-person meetings at our Guidance & Counselling Office in Gigiri, we also provide secure video calls and phone sessions for those on industrial attachment or Teaching Practice.'
   }
 ];

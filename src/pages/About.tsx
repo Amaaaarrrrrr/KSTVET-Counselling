@@ -9,36 +9,36 @@ const About: React.FC = () => {
   const values = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Confidentiality',
-      description: 'Your privacy is our absolute priority. We provide a safe, secure space where you can speak freely without fear of judgment or exposure.'
+      title: 'Professionalism',
+      description: 'We maintain the highest standards of clinical practice, ensuring every session is conducted with expertise and ethical integrity.'
     },
     {
       icon: <Accessibility className="w-6 h-6" />,
-      title: 'Accessibility',
-      description: 'Mental health support should be available to everyone. We offer free and subsidised sessions to ensure cost is never a barrier to care.'
+      title: 'Inclusivity',
+      description: 'Our services are open to all KSTVET trainees and staff, regardless of background, department, or personal circumstances.'
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: 'Dignity',
-      description: 'We treat every individual with the utmost respect, honouring your unique experiences, culture, and personal journey.'
+      title: 'Integrity',
+      description: 'We build trust through honesty and transparency, ensuring that our guidance is always in the best interest of our community.'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Community',
-      description: 'We believe in the power of connection. Our services strengthen the bonds within the KSTVET community and the wider Nairobi area.'
+      title: 'Innovation',
+      description: 'We continuously evolve our counselling techniques to meet the changing needs of technical trainers and trainees in a modern world.'
     }
   ];
 
   return (
     <div className="pt-32 md:pt-40">
       {/* Hero */}
-      <section className="section-pad bg-sand-50">
+      <section className="section-pad bg-ivory-50">
         <div className="max-w-7xl mx-auto text-center">
           <ScrollReveal>
-            <Badge variant="teal" className="mb-6">Our Story</Badge>
-            <h1 className="section-heading mb-8">About KSTVET Counselling</h1>
+            <Badge variant="green" className="mb-6">Our History</Badge>
+            <h1 className="section-heading mb-8">About KSTVET Guidance & Counselling</h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              "Amani" is the Swahili word for peace. At the KSTVET Counselling Centre, we are dedicated to helping every member of our community find that peace within themselves and their lives.
+              Established as part of KSTVET's commitment to holistic education, our department supports the mental and professional wellbeing of Kenya's technical trainers.
             </p>
           </ScrollReveal>
         </div>
@@ -50,22 +50,22 @@ const About: React.FC = () => {
           <div className="space-y-8 text-lg text-slate-600 leading-relaxed">
             <ScrollReveal>
               <p>
-                Founded in 2014, the KSTVET Counselling Centre began as a small initiative to support students struggling with the transition into technical education. We quickly realised that the challenges our students faced—from academic pressure to financial stress and personal trauma—required a more comprehensive, professional approach.
+                The Kenya School of TVET (KSTVET) was established in 1978 as the Kenya Technical Teachers College (KTTC). Over the decades, it has evolved into a premier institution for training technical teachers in Kenya and the region.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p>
-                Over the last decade, we have grown into a fully-fledged clinical service, staffed by qualified psychologists and counsellors registered with the Kenya Counselling and Psychological Association (KCPA). While our primary mission remains supporting KSTVET students, we have expanded our reach to include staff wellbeing programmes and community outreach initiatives.
+                The Guidance and Counselling Department was founded to address the unique pressures faced by technical trainees and staff. We recognize that effective teaching and learning require a stable emotional and mental foundation.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.4}>
               <p>
-                We believe that mental health is the foundation of all success—academic, professional, and personal. By providing a safe, confidential space for healing and growth, we empower our community to overcome obstacles and reach their full potential.
+                Today, we serve as a vital support pillar within the institution, offering professional counselling, career guidance, and wellness programs. Our mission is to empower the KSTVET community to achieve excellence both in the classroom and in their personal lives.
               </p>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={0.3} className="relative">
-            <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl">
+            <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl border-8 border-white">
               <img 
                 src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=1000" 
                 alt="Counselling Session"
@@ -73,27 +73,27 @@ const About: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-teal-50 rounded-full -z-10" />
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-coral-50 rounded-full -z-10" />
+            <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-green-50 rounded-full -z-10" />
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gold-50 rounded-full -z-10" />
           </ScrollReveal>
         </div>
       </section>
 
       {/* Values */}
-      <section className="section-pad bg-sand-50">
+      <section className="section-pad bg-ivory-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <ScrollReveal>
               <h2 className="section-heading">Our Core Values</h2>
-              <p className="section-sub mx-auto">The principles that guide every session and every interaction at our centre.</p>
+              <p className="section-sub mx-auto">The principles that guide every session and every interaction at KSTVET.</p>
             </ScrollReveal>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="card-base p-8 h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                <div className="card-base p-8 h-full border-t-4 border-green-800">
+                  <div className="w-12 h-12 rounded-2xl bg-green-50 text-green-800 flex items-center justify-center mb-6">
                     {value.icon}
                   </div>
                   <h3 className="font-serif text-xl text-slate-900 mb-4">{value.title}</h3>

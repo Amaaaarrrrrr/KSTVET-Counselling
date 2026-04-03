@@ -27,7 +27,7 @@ export const Resources: React.FC = () => {
           <ScrollReveal className="max-w-2xl">
             <h2 className="section-heading">Supportive Resources</h2>
             <p className="section-sub">
-              Access our library of guides, checklists, and articles designed to support your wellbeing and success.
+              Access our library of guides, checklists, and articles designed to support your wellbeing and success at KSTVET.
             </p>
           </ScrollReveal>
           
@@ -39,7 +39,7 @@ export const Resources: React.FC = () => {
                 className={cn(
                   "px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer",
                   activeCategory === cat.id 
-                    ? "bg-teal-400 text-white shadow-md" 
+                    ? "bg-maroon-400 text-white shadow-md" 
                     : "bg-slate-50 text-slate-500 hover:bg-slate-100"
                 )}
               >
@@ -54,16 +54,16 @@ export const Resources: React.FC = () => {
             <ScrollReveal key={resource.id} delay={index * 0.1}>
               <div className={cn(
                 "card-base p-8 h-full flex flex-col border-l-4",
-                resource.category === 'mental_health' && "border-teal-400",
-                resource.category === 'career' && "border-purple-400",
-                resource.category === 'financial' && "border-amber-400",
-                resource.category === 'academic' && "border-coral-400"
+                resource.category === 'mental_health' && "border-maroon-400",
+                resource.category === 'career' && "border-gold-400",
+                resource.category === 'financial' && "border-cta-400",
+                resource.category === 'academic' && "border-forest-400"
               )}>
                 <div className="flex items-center justify-between mb-4">
                   <Badge variant={
-                    resource.category === 'mental_health' ? 'teal' :
-                    resource.category === 'career' ? 'purple' :
-                    resource.category === 'financial' ? 'amber' : 'coral'
+                    resource.category === 'mental_health' ? 'maroon' :
+                    resource.category === 'career' ? 'gold' :
+                    resource.category === 'financial' ? 'cta' : 'forest'
                   } size="sm">
                     {resource.category.replace('_', ' ')}
                   </Badge>
@@ -79,7 +79,7 @@ export const Resources: React.FC = () => {
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
                     {resource.type === 'pdf' ? 'PDF Guide' : resource.readTime}
                   </span>
-                  <Button variant="ghost" size="sm" className="text-teal-600 font-bold p-0 hover:bg-transparent">
+                  <Button variant="ghost" size="sm" className="text-maroon-400 font-bold p-0 hover:bg-transparent">
                     {resource.type === 'pdf' ? 'Download' : 'Read Article'}
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>

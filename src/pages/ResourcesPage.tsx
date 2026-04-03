@@ -28,10 +28,10 @@ const ResourcesPage: React.FC = () => {
   return (
     <div className="pt-32 md:pt-40">
       {/* Hero */}
-      <section className="section-pad bg-sand-50">
+      <section className="section-pad bg-ivory-50">
         <div className="max-w-7xl mx-auto text-center">
           <ScrollReveal>
-            <Badge variant="teal" className="mb-6">Resource Library</Badge>
+            <Badge variant="green" className="mb-6">Resource Library</Badge>
             <h1 className="section-heading mb-8">Tools for Your Journey</h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Explore our collection of guides, articles, and practical tools designed to help you navigate life's challenges at your own pace.
@@ -51,7 +51,7 @@ const ResourcesPage: React.FC = () => {
                 className={cn(
                   "px-5 py-2 rounded-full text-sm font-medium transition-all cursor-pointer",
                   activeCategory === cat.id 
-                    ? "bg-teal-400 text-white shadow-md" 
+                    ? "bg-green-800 text-white shadow-md" 
                     : "bg-slate-50 text-slate-500 hover:bg-slate-100"
                 )}
               >
@@ -67,7 +67,7 @@ const ResourcesPage: React.FC = () => {
               placeholder="Search resources..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-10 py-3 rounded-full bg-slate-50 border border-slate-200 focus:border-teal-400 focus:ring-2 focus:ring-teal-100 outline-none transition-all"
+              className="w-full pl-12 pr-10 py-3 rounded-full bg-slate-50 border border-slate-200 focus:border-green-400 focus:ring-2 focus:ring-green-100 outline-none transition-all"
             />
             {searchQuery && (
               <button 
@@ -90,16 +90,16 @@ const ResourcesPage: React.FC = () => {
                 <ScrollReveal key={resource.id} delay={index * 0.05}>
                   <div className={cn(
                     "card-base p-8 h-full flex flex-col border-l-4",
-                    resource.category === 'mental_health' && "border-teal-400",
-                    resource.category === 'career' && "border-purple-400",
-                    resource.category === 'financial' && "border-amber-400",
-                    resource.category === 'academic' && "border-coral-400"
+                    resource.category === 'mental_health' && "border-green-800",
+                    resource.category === 'career' && "border-gold-400",
+                    resource.category === 'financial' && "border-gold-600",
+                    resource.category === 'academic' && "border-green-400"
                   )}>
                     <div className="flex items-center justify-between mb-4">
                       <Badge variant={
-                        resource.category === 'mental_health' ? 'teal' :
-                        resource.category === 'career' ? 'purple' :
-                        resource.category === 'financial' ? 'amber' : 'coral'
+                        resource.category === 'mental_health' ? 'green' :
+                        resource.category === 'career' ? 'gold' :
+                        resource.category === 'financial' ? 'gold' : 'green'
                       } size="sm">
                         {resource.category.replace('_', ' ')}
                       </Badge>
@@ -115,7 +115,7 @@ const ResourcesPage: React.FC = () => {
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
                         {resource.type === 'pdf' ? 'PDF Guide' : resource.readTime}
                       </span>
-                      <Button variant="ghost" size="sm" className="text-teal-600 font-bold p-0 hover:bg-transparent">
+                      <Button variant="ghost" size="sm" className="text-green-800 font-bold p-0 hover:bg-transparent">
                         {resource.type === 'pdf' ? 'Download' : 'Read Article'}
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Button>

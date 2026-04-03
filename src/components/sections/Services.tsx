@@ -21,7 +21,7 @@ export const Services: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-8">
         <div className="space-y-6">
           <h3 className="font-serif text-3xl text-slate-900">{service.title}</h3>
-          <p className="text-teal-600 font-serif italic text-lg">{service.heroLine}</p>
+          <p className="text-maroon-400 font-serif italic text-lg">{service.heroLine}</p>
           <p className="text-slate-600 leading-relaxed">{service.longDescription}</p>
           <div className="pt-4">
             <Button variant="primary" href="/contact">
@@ -31,13 +31,13 @@ export const Services: React.FC = () => {
         </div>
         <div className="bg-white rounded-3xl p-8 shadow-card border border-slate-100">
           <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-teal-400" />
+            <CheckCircle2 className="w-5 h-5 text-maroon-400" />
             Common issues we help with:
           </h4>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
             {service.issues.map((issue, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-1.5 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mt-1.5 shrink-0" />
                 {issue}
               </li>
             ))}
@@ -46,7 +46,7 @@ export const Services: React.FC = () => {
             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Available for:</p>
             <div className="flex flex-wrap gap-2">
               {service.audiences.map((audience, i) => (
-                <Badge key={i} variant="teal" size="sm">{audience}</Badge>
+                <Badge key={i} variant="maroon" size="sm">{audience}</Badge>
               ))}
             </div>
           </div>
@@ -56,13 +56,13 @@ export const Services: React.FC = () => {
   }));
 
   return (
-    <section className="section-pad bg-sand-50">
+    <section className="section-pad bg-cream-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <ScrollReveal>
             <h2 className="section-heading">Our Specialised Services</h2>
             <p className="section-sub mx-auto">
-              We offer a range of support services tailored to the specific challenges of the TVET community.
+              We offer a range of support services tailored to the specific challenges of the KSTVET community.
             </p>
           </ScrollReveal>
         </div>
