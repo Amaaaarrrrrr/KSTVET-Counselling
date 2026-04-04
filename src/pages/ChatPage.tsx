@@ -53,18 +53,11 @@ const ChatPage: React.FC = () => {
         return;
       }
 
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || (process.env as any).API_KEY });
       const model = "gemini-3-flash-preview";
       
-      const chat = ai.chats.create({
-        model: model,
-        config: {
-          systemInstruction: "You are a supportive, empathetic, and professional AI Counselling Assistant for KSTVET (Kenya School of TVET). Your goal is to provide a safe space for students and staff to express themselves. You are not a replacement for professional human therapy, but a first point of contact for guidance, resources, and emotional support. Always be kind, non-judgmental, and encourage seeking professional help if the situation is serious (e.g., self-harm, severe trauma). Keep your responses concise yet warm. Use Kenyan English nuances where appropriate but remain professional.",
-        },
-      });
-
-      // We send the whole history for context
-      const history = messages.map(m => ({
+      // We send the last 10 messages for context to avoid token limits
+      const history = messages.slice(-10).map(m => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.content }]
       }));
@@ -77,6 +70,7 @@ const ChatPage: React.FC = () => {
         ],
         config: {
           systemInstruction: "You are a supportive, empathetic, and professional AI Counselling Assistant for KSTVET (Kenya School of TVET). Your goal is to provide a safe space for students and staff to express themselves. You are not a replacement for professional human therapy, but a first point of contact for guidance, resources, and emotional support. Always be kind, non-judgmental, and encourage seeking professional help if the situation is serious (e.g., self-harm, severe trauma). Keep your responses concise yet warm. Use Kenyan English nuances where appropriate but remain professional.",
+          maxOutputTokens: 2048, // Limit output to prevent exceeding total token limits
         }
       });
 
