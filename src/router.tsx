@@ -8,6 +8,7 @@ import ResourcesPage from './pages/ResourcesPage';
 import BlogPage from './pages/BlogPage';
 import BlogPost from './pages/BlogPost';
 import ContactPage from './pages/ContactPage';
+import ChatPage from './pages/ChatPage';
 import NotFound from './pages/NotFound';
 
 export const router = createBrowserRouter([
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: '/blog',          element: <BlogPage /> },
       { path: '/blog/:slug',    element: <BlogPost /> },
       { path: '/contact',       element: <ContactPage /> },
+      { path: '/chat',          element: <ChatPage /> },
       { path: '*',              element: <NotFound /> },
     ],
   },
