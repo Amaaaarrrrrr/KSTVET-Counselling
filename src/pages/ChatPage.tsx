@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Send, User, Bot, Loader2, Sparkles, AlertCircle } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
 import { cn } from '../utils/cn';
 import { Button } from '../components/ui/Button';
 
@@ -47,34 +46,29 @@ const ChatPage: React.FC = () => {
     setError(null);
 
     try {
-      if (!process.env.GEMINI_API_KEY) {
-        setError("AI Chat is currently unavailable because the API key is not configured. If you are the administrator, please ensure GEMINI_API_KEY is set in the environment.");
-        setIsLoading(false);
-        return;
-      }
-
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || (process.env as any).API_KEY });
-      const model = "gemini-3-flash-preview";
-      
-      // We send the last 10 messages for context to avoid token limits
       const history = messages.slice(-10).map(m => ({
         role: m.role === 'user' ? 'user' : 'model',
         parts: [{ text: m.content }]
       }));
 
-      const response = await ai.models.generateContent({
-        model: model,
-        contents: [
-          ...history.map(h => ({ role: h.role, parts: h.parts })),
-          { role: 'user', parts: [{ text: input }] }
-        ],
-        config: {
-          systemInstruction: "You are a supportive, empathetic, and professional AI Counselling Assistant for KSTVET (Kenya School of TVET). Your goal is to provide a safe space for students and staff to express themselves. You are not a replacement for professional human therapy, but a first point of contact for guidance, resources, and emotional support. Always be kind, non-judgmental, and encourage seeking professional help if the situation is serious (e.g., self-harm, severe trauma). Keep your responses concise yet warm. Use Kenyan English nuances where appropriate but remain professional.",
-          maxOutputTokens: 2048, // Limit output to prevent exceeding total token limits
-        }
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: input,
+          history: history,
+        }),
       });
 
-      const aiContent = response.text || "I'm sorry, I couldn't process that. Could you try again?";
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to get response from server.");
+      }
+
+      const data = await response.json();
+      const aiContent = data.text || "I'm sorry, I couldn't process that. Could you try again?";
       
       const assistantMessage: Message = {
         role: 'assistant',
@@ -83,9 +77,9 @@ const ChatPage: React.FC = () => {
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch (err) {
+    } catch (err: any) {
       console.error("Chat Error:", err);
-      setError("Something went wrong. Please try again later.");
+      setError(err.message || "Something went wrong. Please try again later.");
     } finally {
       setIsLoading(false);
     }
