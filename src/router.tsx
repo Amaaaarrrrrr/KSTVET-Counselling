@@ -9,6 +9,9 @@ import BlogPage from './pages/BlogPage';
 import BlogPost from './pages/BlogPost';
 import ContactPage from './pages/ContactPage';
 import ChatPage from './pages/ChatPage';
+import SurveysPage from './pages/SurveysPage';
+import SurveyTakePage from './pages/SurveyTakePage';
+import SurveyThankYou from './pages/SurveyThankYou';
 import NotFound from './pages/NotFound';
 
 export const router = createBrowserRouter([
@@ -24,6 +27,9 @@ export const router = createBrowserRouter([
       { path: '/blog/:slug',    element: <BlogPost /> },
       { path: '/contact',       element: <ContactPage /> },
       { path: '/chat',          element: <ChatPage /> },
+      { path: '/surveys',       element: <SurveysPage /> },
+      { path: '/surveys/:slug', element: <SurveyTakePage /> },
+      { path: '/surveys/:slug/complete', element: <SurveyThankYou /> },
       { path: '*',              element: <NotFound /> },
     ],
   },

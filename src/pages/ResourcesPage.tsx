@@ -84,6 +84,26 @@ const ResourcesPage: React.FC = () => {
       {/* Grid */}
       <section className="section-pad bg-white min-h-[400px]">
         <div className="max-w-7xl mx-auto">
+          {/* Surveys & Assessments Callout */}
+          <ScrollReveal className="mb-12">
+            <div className="bg-green-50 rounded-3xl p-8 border border-green-100 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <FileText className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl text-slate-900 mb-2">Surveys & Self-Assessments</h3>
+                  <p className="text-slate-600 text-sm max-w-xl">
+                    Take our evidence-based screenings and feedback surveys to better understand your wellbeing and help us improve our services.
+                  </p>
+                </div>
+              </div>
+              <Button href="/surveys" variant="primary" className="whitespace-nowrap">
+                View All Surveys
+              </Button>
+            </div>
+          </ScrollReveal>
+
           {filteredResources.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredResources.map((resource, index) => (

@@ -47,6 +47,12 @@ const ChatPage: React.FC = () => {
     setError(null);
 
     try {
+      if (!process.env.GEMINI_API_KEY) {
+        setError("AI Chat is currently unavailable because the API key is not configured. If you are the administrator, please ensure GEMINI_API_KEY is set in the environment.");
+        setIsLoading(false);
+        return;
+      }
+
       const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
       const model = "gemini-3-flash-preview";
       

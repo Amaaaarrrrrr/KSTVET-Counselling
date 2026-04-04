@@ -47,12 +47,15 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
             <Button variant="primary" size="lg" href="/contact">
               Book a Session
             </Button>
             <Button variant="outline" size="lg" href="/services">
               Our Services
+            </Button>
+            <Button variant="ghost" size="lg" href="/surveys" className="text-maroon-400 hover:bg-maroon-50 border-maroon-100">
+              Don't know where to start?
             </Button>
           </div>
         </motion.div>
